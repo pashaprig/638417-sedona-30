@@ -1,0 +1,90 @@
+/* fonts */
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'),
+       url('../fonts/PTSans.woff2') format('woff2'),
+       url('../fonts/PTSans.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'),
+       url('../fonts/PTSans-Bold.woff2') format('woff2'),
+       url('../fonts/PTSans-Bold.woff') format('woff'), 
+}
+
+/* root */
+
+:root {
+	--basic-black: #000000;
+	--text-hover-blue: #81B3D2;
+	--basic-white: #FFFFFF;
+
+/* button colors */
+/* more */
+	--button-more-regular: #81B3D2;
+	--button-more-hover: #669EC0;
+	--button-more-active: #5496BD;
+/* book */
+	--button-book-regular: #766357;
+	--button-book-hover: #604E43;
+	--button-book-active: #503E33;
+}
+
+/* body */
+.page-body{
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
+/* navigation */
+.site-navigation{
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.navigation_item a:hover{
+	color: var(--text-hover-blue);
+
+}
+.navigation_item a:active{
+	color: var(--basic-black);
+	opacity: 0.3;
+}
+
+
+
+/* title_main_page footer_phone          serch_result hotel_name */
+.title-big{
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 26px;
+}
+
+/* features */
+.feature-title{
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 21px;
+}
+
+.big-features-text{
+	border-color: var(--text-hover-blue);
+	color: var(--basic-white);
+}
+
+/* appointment */
+.appointment-title{
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 24px;
+}
