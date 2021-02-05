@@ -23,6 +23,7 @@
 :root {
 	--basic-black: #000000;
 	--text-hover-blue: #81B3D2;
+	--text-active-brown: #766357;
 	--basic-white: #FFFFFF;
 
 /* button colors */
@@ -78,7 +79,7 @@
 }
 
 .big-features-text{
-	border-color: var(--text-hover-blue);
+	background-color: : var(--text-hover-blue);
 	color: var(--basic-white);
 }
 
@@ -87,4 +88,56 @@
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 24px;
+}
+
+.hidden{
+	display: none;
+}
+
+/*------------------------hotels.html------------------------------------*/
+
+/* result_field */
+.hotel-name a:hover{
+	background-color: : var(--text-hover-blue);
+}
+.hotel-name a:active{
+	opacity: 0.3;
+}
+
+.button{
+	font-weight: 700;
+	color: var(--basic-white);	
+}
+.search-result button{
+	color: var(--basic-black);
+}
+
+.search-result p, button{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+/* more_button */
+.more-button button{
+	background-color: var(--button-more-regular);
+}
+.more-button button:hover{
+	background-color: var(--button-more-hover);
+}
+.more-button button:active{
+	background-color: var(--button-more-active);
+	opacity: 0.3;
+}
+
+/* book_button */
+.book-button button{
+	background-color: var(--button-book-regular);
+}
+.book-button button:hover{
+	background-color: var(--button-book-hover);
+}
+.book-button button:active{
+	background-color: var(--button-book-active);
+	opacity: 0.3;
 }

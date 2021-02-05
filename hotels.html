@@ -12,84 +12,84 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
 
-  <body>
-  	<header>
-  		<nav>
-  			<a>
+  <body class="page-body">
+  	<header class="main-header">
+  		<nav class="main-navigation">
+  			<a class="header-logo">
       			<img src="img/logo.svg" width="138" height="70" alt="Логотип Седоны">
     		</a>
 
-		    <ul>
-		      <li><a href="#">Информация</a></li>
-		      <li><a href="#">Фото и видео</a></li>
-		      <li><a href="#">Карта штата</a></li>
-		      <li><a href="hotels.html">Гостиницы</a></li>
+		    <ul class="site-navigation">
+		      <li class="navigation_item"><a href="#">Информация</a></li>
+		      <li class="navigation_item"><a href="#">Фото и видео</a></li>
+		      <li class="navigation_item"><a href="#">Карта штата</a></li>
+		      <li class="navigation_item site-navigation-current"><a href="hotels.html">Гостиницы</a></li>
 		    </ul>
   		</nav>
-  	</header>
+	</header>
 
-	<main>
+	<main class="container">
 		<!-- Тут будет форма выбора отеля -->
-		
-		<h2 class="title-big">Найдено: 3</h2><p>Сортировка:</p> <button>По цене</button> <button>По типу</button> <button>По рейтингу</button> <button><!-- Стрелка вверх --></button> <button><!-- Стрелка вниз --></button>
-
-		<ul>
-			<li>
+	<div class="search-result">
+		<h2 class="title-big">Найдено: 3</h2><p>Сортировка:</p> <button class="button">По цене</button> <button class="button">По типу</button> <button class="button">По рейтингу</button> <button class="button"><!-- Стрелка вверх --></button> <button class="button"><!-- Стрелка вниз --></button>
+	</div>	
+		<ul class="hotels-result-list">
+			<li class="hotels-result-item">
 				<img src="img/amara_resort.jpg" width="135" height="90" alt="Отель Amara Resort & Spa">
-				<h2 class="title-big">Amara Resort & Spa</h2> <!-- четыре звёздочки -->
+				<h2 class="title-big hotel-name"><a href="#">Amara Resort & Spa</a></h2> <!-- четыре звёздочки -->
 				<p>Гостиница От 4000 Р.</p>
-				<button>Подробнее</button> <button>Забронировать</button> <p>Рейтинг: 8,5</p>
+				<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button> <p>Рейтинг: 8,5</p>
 			</li>
 
-			<li>
+			<li class="hotels-result-item">
 				<img src="img/desert_quail.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
-				<h2 class="title-big">Desert Quail Inn</h2> <!-- три звёздочки -->
+				<h2 class="title-big hotel-name"><a href="#">Desert Quail Inn</a></h2> <!-- три звёздочки -->
 				<p>Мотель От 3000 Р.</p>
-				<button>Подробнее</button> <button>Забронировать</button> <p>Рейтинг: 8,9</p>
+				<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button> <p>Рейтинг: 8,9</p>
 			</li>
 
-			<li>
+			<li class="hotels-result-item">
 				<img src="img/poco_diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
-				<h2 class="title-big">Amara Resort & Spa</h2> <!-- две звёздочки -->
+				<h2 class="title-big hotel-name"><a href="#">Amara Resort & Spa</a></h2> <!-- две звёздочки -->
 				<p>Апартаменты От 2000 Р.</p>
-				<button>Подробнее</button> <button>Забронировать</button> <p>Рейтинг: 9,2</p>
+				<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button> <p>Рейтинг: 9,2</p>
 			</li>
 		</ul>
 	</main>
     
 
-	<footer>
+	<footer class="main-footer">
 
-		<section>
-			<h2>Телефон</h2>
+		<section class="contacts">
+			<h2 class="hidden">Телефон</h2>
 			<p class="title-big">
 				#visitSEDONA<br>
-				ТЕЛ:<a href="tel:+74956660166">+7(495) 666-01-66</a>
+				ТЕЛ:<a class="footer-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
 			</p>
 		</section>
 
-		<section>
+		<section class="footer-social">
 
-			<h2>Наши соцсети</h2>
+			<h2 class="hidden">Наши соцсети</h2>
 
 			<ul>
 				<li>
-					<a href="#">Твитер</a>
+					<a class="social-button" href="#">Твитер</a>
 				</li>
 
 				<li>
-					<a href="#">Фейсбук</a>
+					<a class="social-button" href="#">Фейсбук</a>
 				</li>
 
 				<li>
-					<a href="#">Ютюб</a>
+					<a class="social-button" href="#">Ютюб</a>
 				</li>
 			</ul>
 		</section>	
 
-		<section>
+		<section class="footer-copyright">
 
-			<h2>Разработано</h2>
+			<h2 class="hidden">Разработано</h2>
 
 			<p>Website by</p>
 
