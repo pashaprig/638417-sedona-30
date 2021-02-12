@@ -37,6 +37,13 @@
 	--button-book-active: #503E33;
 }
 
+/* для всех секций: хедер, футер...  */
+.container{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 /* body */
 .page-body{
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -46,11 +53,22 @@
 	text-transform: uppercase;
 }
 
+
 /* navigation */
 .site-navigation{
+	padding: 0;
+	list-style: none;	
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 26px;
+}
+
+.navigation_item{
+	display: inline;
+}
+.navigation_item a{
+	text-decoration: none;
+	color: var(--basic-black);
 }
 
 .navigation_item a:hover{
@@ -72,17 +90,31 @@
 }
 
 /* features */
+.features-list {
+	list-style: none;
+	padding: 0;
+}
+
+.features-list-more{
+	list-style: none;
+	padding: 0;
+}
+
 .feature-title{
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 21px;
 }
-
 .big-features-text{
-	background-color: : var(--text-hover-blue);
+	background-color: var(--text-hover-blue);
 	color: var(--basic-white);
 }
 
+.feature-image{
+	background-color: var(--button-book-regular);
+	width: 800px;
+	height: 256px;
+}
 /* appointment */
 .appointment-title{
 	font-weight: 700;
@@ -141,3 +173,6 @@
 	background-color: var(--button-book-active);
 	opacity: 0.3;
 }
+
+
+
