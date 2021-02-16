@@ -218,51 +218,140 @@
 }
 
 /*------------------------hotels.html------------------------------------*/
+/* header */
+.hotels-page a{
+ 
+}
+
+/* search-form */
+.search-form{
+	background-color: var(--button-book-regular);
+	width: 1200px;
+	height: 217px;
+	text-align: center;
+}
 
 /* result_field */
+.search-result{
+	display: grid;
+	grid-template-columns: 135px 1fr max-content;
+}
+
+.up-down-order-list{
+	padding: 0;
+	list-style: none;	
+}
+
+.up-down-order-item{
+	display: inline;
+}
+
+.hotels-item-grid{
+	display: grid;
+	grid-template-columns: 135px 1fr max-content;	
+}
+
+.hotel-variant{
+	padding-left: 29px;
+}
+
+.hotel-name{
+	text-align: left;
+	margin: 0;
+	padding-top: 23.5px;
+}
+
+.hotel-name a{
+	color: var(--basic-black);
+	text-decoration: none;
+}
+
 .hotel-name a:hover{
-	background-color: : var(--text-hover-blue);
+	color: var(--text-hover-blue);
 }
 .hotel-name a:active{
+	color: var(--basic-black);
 	opacity: 0.3;
 }
 
-.button{
-	font-weight: 700;
-	color: var(--basic-white);	
-}
-.search-result button{
-	color: var(--basic-black);
+.hotel-price{
+	margin: 0;
+	padding-top: 7px;
+	padding-bottom: 15.5px
 }
 
-.search-result p, button{
+.stars{
+	padding-top: 29px;
+}
+
+.search-result p{
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 18px;
 }
 
-/* more_button */
-.more-button button{
-	background-color: var(--button-more-regular);
+.hotels-result-list{
+	list-style: none;
+	padding: 0;
 }
-.more-button button:hover{
+
+.hotels-result-item{
+	padding: 30px 0;
+}
+
+.hotels-result-item img{
+	padding-top: 30px;
+}
+
+/* buttons */
+.button{	
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 21px;
+	width: 110px;
+	height: 27px;
+	text-transform: uppercase;
+  border-width: 0;
+  border-radius: 0px;
+	color: var(--basic-white);	
+}
+
+.sorting-button{
+	background: none; 
+	color: var(--basic-black);
+	opacity: 0.3;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+	text-decoration: 1px dashed var(--text-hover-blue);
+}
+
+
+
+/* more_button */
+.more-button{	
+	background-color: var(--button-more-regular);
+
+}
+.more-button:hover{
 	background-color: var(--button-more-hover);
 }
-.more-button button:active{
+.more-button:active{
 	background-color: var(--button-more-active);
-	opacity: 0.3;
+	border-width: 0;
 }
 
 /* book_button */
-.book-button button{
+.book-button{
+	width: 142px;
 	background-color: var(--button-book-regular);
 }
-.book-button button:hover{
+.book-button:hover{
 	background-color: var(--button-book-hover);
 }
-.book-button button:active{
+.book-button:active{
 	background-color: var(--button-book-active);
-	opacity: 0.3;
+	border-width: 0;
 }
 
 

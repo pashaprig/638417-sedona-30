@@ -13,88 +13,150 @@
   </head>
 
   <body class="page-body">
-  	<header class="main-header">
-  		<nav class="main-navigation">
-  			<a class="header-logo">
-      			<img src="img/logo.svg" width="138" height="70" alt="Логотип Седоны">
-    		</a>
+<header class="main-header">
+  		<div class="container">
+	  		<!-- добавить див контейнер -->
+	  		<nav class="main-navigation">
+	  			<a class="header-logo">
+	      			<img src="img/logo.svg" width="138" height="70" alt="Логотип Седоны">
+	    		</a>
 
-		    <ul class="site-navigation">
-		      <li class="navigation_item"><a href="#">Информация</a></li>
-		      <li class="navigation_item"><a href="#">Фото и видео</a></li>
-		      <li class="navigation_item"><a href="#">Карта штата</a></li>
-		      <li class="navigation_item site-navigation-current"><a href="hotels.html">Гостиницы</a></li>
-		    </ul>
-  		</nav>
-	</header>
+			    <ul class="site-navigation">
+			      <li class="navigation_item"><a href="#">Информация</a></li>
+			      <li class="navigation_item"><a href="#">Фото и видео</a></li>
+			      <li class="navigation_item"><a href="#">Карта штата</a></li>
+			      <li class="navigation_item hotels-page"><a href="hotels.html">Гостиницы</a></li>
+			    </ul>
+	  		</nav>
+  		</div>
+		</header>
 
-	<main class="container">
-		<!-- Тут будет форма выбора отеля -->
-	<div class="search-result">
-		<h2 class="title-big">Найдено: 3</h2><p>Сортировка:</p> <button class="button">По цене</button> <button class="button">По типу</button> <button class="button">По рейтингу</button> <button class="button"><!-- Стрелка вверх --></button> <button class="button"><!-- Стрелка вниз --></button>
-	</div>	
-		<ul class="hotels-result-list">
-			<li class="hotels-result-item">
-				<img src="img/amara_resort.jpg" width="135" height="90" alt="Отель Amara Resort & Spa">
-				<h2 class="title-big hotel-name"><a href="#">Amara Resort & Spa</a></h2> <!-- четыре звёздочки -->
-				<p>Гостиница От 4000 Р.</p>
-				<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button> <p>Рейтинг: 8,5</p>
-			</li>
+	<main>
+		<div  class="container">			
+				<!-- Тут будет форма выбора отеля -->
+			<div class="search-form">
+				<span>Инфраструктура:</span>
+			</div>
 
-			<li class="hotels-result-item">
-				<img src="img/desert_quail.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
-				<h2 class="title-big hotel-name"><a href="#">Desert Quail Inn</a></h2> <!-- три звёздочки -->
-				<p>Мотель От 3000 Р.</p>
-				<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button> <p>Рейтинг: 8,9</p>
-			</li>
+			<div class="search-result">
+				<div>
+					<span class="title-big">Найдено: 3</span>
+				</div>
 
-			<li class="hotels-result-item">
-				<img src="img/poco_diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
-				<h2 class="title-big hotel-name"><a href="#">Amara Resort & Spa</a></h2> <!-- две звёздочки -->
-				<p>Апартаменты От 2000 Р.</p>
-				<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button> <p>Рейтинг: 9,2</p>
-			</li>
-		</ul>
+				<div>
+					<span>Сортировка:</span> <button class="button sorting-button">По цене</button> <button class="button sorting-button">По типу</button> <button class="button sorting-button">По рейтингу</button>	
+				</div>
+
+				<div>
+					<ul class="up-down-order-list">
+						<li class="up-down-order-item"><button class="button"><!-- Стрелка вверх --></button></li>
+						<li class="up-down-order-item"><button class="button"><!-- Стрелка вниз --></button></li>
+					</ul>			 
+				</div>		
+			</div>
+
+			<ul class="hotels-result-list">
+				<li class="hotels-result-item">
+					<div class="hotels-item-grid">
+						<img src="img/amara_resort.jpg" width="135" height="90" alt="Отель Amara Resort & Spa">
+
+						<div class="hotel-variant">
+							<h2 class="title-big hotel-name"><a href="#">Amara Resort & Spa</a></h2> 
+							<p class="hotel-price">
+								<span>Гостиница</span> <span>От 4000 Р.</span>
+							</p>
+							<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button>
+						</div>
+
+						<div class="stars">						
+							<span>4 4 4 4</span>
+							<p>Рейтинг: 8,5</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="hotels-result-item">
+					<div class="hotels-item-grid">
+						<img src="img/desert_quail.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
+
+						<div class="hotel-variant">
+							<h2 class="title-big hotel-name"><a href="#">Desert Quail Inn</a></h2> 
+							<p class="hotel-price">
+								<span>Мотель</span> <span>От 3000 Р.</span>
+							</p>
+							<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button>
+						</div>
+
+						<div class="stars">						
+							<span>3 3 3</span>
+							<p>Рейтинг: 8,9</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="hotels-result-item">
+					<div class="hotels-item-grid">
+						<img src="img/poco_diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
+
+						<div class="hotel-variant">
+							<h2 class="title-big hotel-name"><a href="#">Villas at Poco Diablo</a></h2> 
+							<p class="hotel-price">
+								<span>Апартаменты</span> <span>От 2000 Р.</span>
+							</p>
+							<button class="button more-button">Подробнее</button> <button class="button book-button">Забронировать</button>
+						</div>
+
+						<div class="stars">						
+							<span>2 2</span>
+							<p>Рейтинг: 9,2</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>	
 	</main>
     
 
 	<footer class="main-footer">
+		<div class="container">
+			<div class="footer-grid">
+				<section class="contacts">
+					<span class="hidden">Телефон</span>
+					<p class="phone">
+						<a href="#">#visitSEDONA</a><br>
+						тел:<a class="footer-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
+					</p>
+				</section>
 
-		<section class="contacts">
-			<h2 class="hidden">Телефон</h2>
-			<p class="title-big">
-				#visitSEDONA<br>
-				ТЕЛ:<a class="footer-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
-			</p>
-		</section>
+				<section class="footer-social">
 
-		<section class="footer-social">
+					<span class="hidden">Контакты</span>
 
-			<h2 class="hidden">Наши соцсети</h2>
+					<ul class="social-button-list">
+						<li class="social-button-item">
+							<a class="social-button" href="#">Twitter</a>
+						</li>
 
-			<ul>
-				<li>
-					<a class="social-button" href="#">Твитер</a>
-				</li>
+						<li class="social-button-item">
+							<a class="social-button" href="#">Facebook</a>
+						</li>
 
-				<li>
-					<a class="social-button" href="#">Фейсбук</a>
-				</li>
+						<li class="social-button-item">
+							<a class="social-button" href="#">YouTube</a>
+						</li>
+					</ul>
+				</section>	
 
-				<li>
-					<a class="social-button" href="#">Ютюб</a>
-				</li>
-			</ul>
-		</section>	
+				<section class="footer-copyright">
 
-		<section class="footer-copyright">
+					<span class="hidden">Сайт разработан</span>
 
-			<h2 class="hidden">Разработано</h2>
+					<span>Website by</span>
 
-			<p>Website by</p>
-
-			<img src="img/developer-logo.svg/115х41" width="115" height="41" alt="Логотип разработчика">
-		</section>
+					<img src="img/developer-logo.svg/115х41" width="115" height="41" alt="Логотип разработчика">
+				</section>
+			</div>	
+		</div>	
 	</footer>
   </body>
 </html>
