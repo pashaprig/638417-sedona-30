@@ -22,6 +22,7 @@
 
 :root {
 	--basic-black: #000000;
+	--basic-grey: #EEEEEE;
 	--text-hover-blue: #81B3D2;
 	--text-active-brown: #766357;
 	--basic-white: #FFFFFF;
@@ -64,9 +65,23 @@
 	background-color: var(--button-book-regular);
 	width: 1200px;
 	height: 509px;
-	text-align: center;
+	margin-bottom: 20px; 
 }
 
+.baner-photo, .baner-text, .baner-shape{
+	position: relative;
+}
+.baner-text {
+	top: auto;
+	z-index: 2;
+}
+
+.baner-shape {
+	z-index: 2;
+	top: -57px; 
+
+
+}
 /* navigation */
 .site-navigation{
 	padding: 0;
@@ -115,6 +130,7 @@
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	text-align: center;
+	padding-bottom: 60px;
 }
 
 .second-feature{
@@ -123,13 +139,21 @@
 	text-align: center;
 }
 
+.second-feature > .feature-image{
+	grid-row: 1 / 2;
+}
+
 .third-fourth-fifth-feature{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	list-style: none;
-	padding: 0;
+	padding: 20px;
+	
 	text-align: center;
+	background-color: var(--basic-grey)
 }
+
+
 
 .features-list-more{
 	display: grid;
@@ -137,6 +161,17 @@
 	list-style: none;
 	padding: 0;
 	text-align: center;
+	padding-bottom: 80px;
+}
+
+.features-item-more{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.features-item-more p {
+  margin: 0 20px;
 }
 
 .feature-title{
@@ -153,8 +188,16 @@
 }
 
 .big-features-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;	
 	background-color: var(--text-hover-blue);
 	color: var(--basic-white);
+}
+
+.big-features-text p {
+  margin: 0 20px;
 }
 
 .feature-image{
@@ -180,9 +223,9 @@
 }
 
 /* footer */
-.footer-grid{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+.footer-flex{
+	display: flex;
+	justify-content: space-around;
 }
 
 .phone{	
@@ -208,13 +251,16 @@
 }
 
 .social-button-list{
+	display: flex;
+	justify-content: space-between;
 	list-style: none;
-	padding: 0;
+	padding: 0px;
 	text-align: center;
 }
 
 .social-button-item{
 	display: inline;
+	margin-right: 6px;
 }
 
 /*------------------------hotels.html------------------------------------*/
