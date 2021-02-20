@@ -48,6 +48,14 @@
 	margin: 0 auto;
 }
 
+.header-logo{
+position:absolute;
+top:0;
+left:50%;
+width:138px;
+height:70px
+}
+
 /* body */
 .page-body{
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -62,23 +70,16 @@
 }
 
 .main-img{
-	background-color: var(--button-book-regular);
+	background: url(../img/background_photo.jpg) no-repeat var(--button-book-regular);
 	width: 1200px;
 	height: 509px;
 	margin-bottom: 20px; 
+
 }
 
-.baner-photo, .baner-text, .baner-shape{
+.baner-shape{
 	position: relative;
-}
-.baner-text {
-	top: auto;
 	z-index: 2;
-}
-
-.baner-shape {
-	z-index: 2;
-	top: -57px; 
 
 
 }
@@ -269,9 +270,10 @@ align-items: center;
  
 }
 
-/* search-form */
+/* search_form */
 .search-form{
-	background-color: var(--button-book-regular);
+	
+	background: url(../img/background.jpg) no-repeat var(--button-book-regular);
 	width: 1200px;
 	height: 217px;
 	text-align: center;
@@ -301,6 +303,49 @@ align-items: center;
 	padding-left: 29px;
 }
 
+.hotel-variant .hotel-price{
+	display: flex;
+
+	/*border: 1px solid black;*/
+}
+
+.hotel-price{
+	padding-bottom: 15.5px
+}
+
+.hotel-type{
+	width: 110px;
+	margin-right: 9px; /* не могу понять почему 6 пикселей не хватает, руками подобрал 9, хотя размер блоков текста и кнопок одинаковый, кнопкам 6 хватает, а тексту нет */
+	}
+
+.price{
+	width: 142px;
+}
+
+.hotel-variant .title-flex{
+	display: flex;
+	margin: ;
+	/*border: 1px solid black;*/
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+ .button-flex{
+	display: flex;
+	/*border: 1px solid black;*/
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.reiting{
+	display: block;
+	background-color: var(--basic-grey);
+	width: 110px;
+	height: 27px;
+	text-align: center;	
+	padding-top: 3px;
+}
+
 .hotel-name{
 	text-align: left;
 	margin: 0;
@@ -318,12 +363,6 @@ align-items: center;
 .hotel-name a:active{
 	color: var(--basic-black);
 	opacity: 0.3;
-}
-
-.hotel-price{
-	margin: 0;
-	padding-top: 7px;
-	padding-bottom: 15.5px
 }
 
 .stars{
@@ -357,9 +396,10 @@ align-items: center;
 	width: 110px;
 	height: 27px;
 	text-transform: uppercase;
-  border-width: 0;
-  border-radius: 0px;
-	color: var(--basic-white);	
+  	border-width: 0;
+  	border-radius: 0px;
+	color: var(--basic-white);
+	padding: 3px 16px;	
 }
 
 .sorting-button{
@@ -377,6 +417,8 @@ align-items: center;
 /* more_button */
 .more-button{	
 	background-color: var(--button-more-regular);
+	width: 110px;
+	margin-right: 6px;
 
 }
 .more-button:hover{
