@@ -49,11 +49,10 @@
 }
 
 .header-logo{
-position:absolute;
-top:0;
-left:50%;
-width:138px;
-height:70px
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%)
 }
 
 /* body */
@@ -70,21 +69,30 @@ height:70px
 }
 
 .main-img{
+	position: relative;
 	background: url(../img/background_photo.jpg) no-repeat var(--button-book-regular);
 	width: 1200px;
 	height: 509px;
-	margin-bottom: 20px; 
-
+	margin-bottom: 20px;
+	z-index: -1;
 }
 
 .baner-shape{
-	position: relative;
-	z-index: 2;
-
-
+	position: absolute;
+	bottom: 0;
 }
+
+.baner-text{
+	position: absolute;
+	width: 1200px;
+	text-align: center;
+	bottom: 50%;
+	transform: translateX(10px); /* не могу понять почему не работает */
+	transform: translateY(50%);
+}
+
 /* navigation */
-.site-navigation{
+.site-navigation{	
 	padding: 0;
 	list-style: none;	
 	font-weight: 700;
@@ -94,7 +102,25 @@ height:70px
 
 .navigation_item{
 	display: inline;
+	height: 26px;
+	padding: 0;
+	margin: 15px 0;
 }
+
+.navigation_item:first-child{
+	margin-left: 72px;
+	margin-right: 134px;
+}
+
+.navigation_item:nth-child(2){
+	margin-right: 418px;
+}
+
+.navigation_item:nth-child(3){
+	margin-right: 147px;
+}
+
+
 .navigation_item a,{
 	text-decoration: none;
 	color: var(--basic-black);
@@ -122,16 +148,36 @@ height:70px
 }
 
 /* features */
+.main-heading-wraper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 216px;
+}
+
+.main-heading-wraper h1, h2{
+	margin: 0;
+	padding: 0;
+}
+
+.main-heading{
+	width: 470px;
+	text-align: center;
+	margin-top: 42.5px;
+	margin-bottom: 16.5px;
+}
+
 .features-list {
 	list-style: none;
 	padding: 0;
+	margin: 0;
 }
 
 .first-feature{
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	text-align: center;
-	padding-bottom: 60px;
+	margin-bottom: 60px;
 }
 
 .second-feature{
@@ -144,17 +190,6 @@ height:70px
 	grid-row: 1 / 2;
 }
 
-.third-fourth-fifth-feature{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	list-style: none;
-	padding: 20px;
-	
-	text-align: center;
-	background-color: var(--basic-grey)
-}
-
-
 
 .features-list-more{
 	display: grid;
@@ -162,7 +197,6 @@ height:70px
 	list-style: none;
 	padding: 0;
 	text-align: center;
-	padding-bottom: 80px;
 }
 
 .features-item-more{
@@ -171,14 +205,26 @@ flex-direction: column;
 align-items: center;
 }
 
+.features-item-more img {
+  margin-bottom: 28px;
+}
+
 .features-item-more p {
-  margin: 0 20px;
+  margin-bottom: 82px;
+  width: 300px;
+}
+
+.features-item-more span{
+	margin-bottom: 23px;
 }
 
 .feature-title{
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 21px;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	padding: 0px;
 }
 
 .features-heading{
@@ -206,9 +252,31 @@ align-items: center;
 	width: 800px;
 	height: 256px;
 }
+
+.third-fourth-fifth-feature{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	list-style: none;
+	text-align: center;
+	background-color: var(--basic-grey);
+	margin: 0px;
+	padding-top: 47px;
+	margin-bottom: 58px;
+}
+
+.third-fourth-fifth-feature p{
+	margin-bottom: 54px;
+	width: 250px;
+}
 /* appointment */
 .appointment{
+	display: flex;
+	flex-direction: column;
 	text-align: center;
+}
+
+.appointment p{
+
 }
 
 .appointment-title{
@@ -235,17 +303,17 @@ align-items: center;
 	line-height: 26px;
 }
 
-.phone a,{
+.phone a, .footer-phone a{
 	text-decoration: none;
 	color: var(--basic-black);
 }
 
-.phone a:hover{
+.phone a:hover, .footer-phone a:hover{
 	text-decoration: none;
 	color: var(--text-hover-blue);
 
 }
-.phone a:active{
+.phone a:active, .footer-phone a:active{
 	text-decoration: none;
 	color: var(--basic-black);
 	opacity: 0.3;
@@ -260,8 +328,11 @@ align-items: center;
 }
 
 .social-button-item{
+	width: 46px;
+	height: 48px;
 	display: inline;
 	margin-right: 6px;
+	background-color: var(--text-hover-blue);
 }
 
 /*------------------------hotels.html------------------------------------*/
@@ -314,12 +385,12 @@ align-items: center;
 }
 
 .hotel-type{
-	width: 110px;
+	flex-basis: 110px;
 	margin-right: 9px; /* не могу понять почему 6 пикселей не хватает, руками подобрал 9, хотя размер блоков текста и кнопок одинаковый, кнопкам 6 хватает, а тексту нет */
 	}
 
 .price{
-	width: 142px;
+	flex-basis: 142px;
 }
 
 .hotel-variant .title-flex{
