@@ -15,7 +15,7 @@
   font-weight: 700;
   src: local('PT Sans Bold'),
        url('../fonts/PTSans-Bold.woff2') format('woff2'),
-       url('../fonts/PTSans-Bold.woff') format('woff'), 
+       url('../fonts/PTSans-Bold.woff') format('woff'),
 }
 
 /* root */
@@ -55,7 +55,7 @@
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translateX(-50%)
+	transform: translateX(-50%);
 }
 
 /* body */
@@ -293,6 +293,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 
 .appointment-title{
@@ -318,6 +319,7 @@
 	align-self: flex-end;
 }
 
+
 /* Search_form*/
 
 .date-choice-form{
@@ -325,7 +327,7 @@
 	bottom: -395px;*/
 	display: flex;
 	flex-direction: column;
-	/*align-items: flex-end*/;
+	align-items: center;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 26px;
@@ -344,13 +346,16 @@
 	background-color: var(--form-grey);
 	text-align: left;
 	height: 38px;
-/*	margin: 0;*/
 	padding: 0;
+	padding-left: 13px;
+
 }
 
 .adults-children{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	width: 50%;
 }
 
 .adults-children input[type="text"]{
@@ -361,11 +366,43 @@
 	padding: 0;
 }
 
-.date{
-	margin: ri
+.adults{
+	display: flex;
+	justify-content: space-between;
+	padding-right: 5px;
 }
 
-/* hidden */
+.children{
+	display: flex;
+	justify-content: flex-end;
+}
+.children label{
+	margin-right: 27px; 
+}
+.booking-item{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 458px;
+	margin-bottom: 30px;
+}
+
+.booking-item:last-child{
+	margin-bottom: 54px;
+}
+
+.date-booking{
+	width: 295px;
+}
+
+.date-choice{
+	display: flex;
+	height: 38px;	
+}
+
+
+
+/* Hidden */
 
 .hidden{
 	position: absolute;
@@ -647,11 +684,10 @@
 	padding-bottom: 16px;
 }
 
-.form-button{
-
-	vertical-align: middle;
-	margin: 0;
-	padding: 0;
+.form-button{	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 38px;
 	height: 38px;
 }
