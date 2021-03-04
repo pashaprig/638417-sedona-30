@@ -24,6 +24,7 @@
 	--basic-black: #000000;
 	--basic-grey: #EEEEEE;
 	--border-grey: #E5E5E5;
+	--form-grey: #F2F2F2;
 	--text-hover-blue: #81B3D2;
 	--text-focus-brown: #766357;
 	--basic-white: #FFFFFF;
@@ -103,6 +104,7 @@
 /* navigation */
 .site-navigation{	
 	display: flex;
+	flex-wrap: wrap;
 	padding: 0;
 	margin: 0;
 	list-style: none;	
@@ -276,6 +278,7 @@
 	background-color: var(--button-book-regular);
 	width: 800px;
 	height: 256px;
+	object-fit: contain;
 }
 
 .features-item-more{
@@ -285,18 +288,17 @@
 
 /* appointment */
 .appointment{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 291px;
 }
 
 .appointment-title{
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 24px;
-
 }
 
 .appointment a{
@@ -314,6 +316,53 @@
 	margin-left: auto;
 	margin-right: auto;
 	align-self: flex-end;
+}
+
+/* Search_form*/
+
+.date-choice-form{
+/*	position: absolute;
+	bottom: -395px;*/
+	display: flex;
+	flex-direction: column;
+	/*align-items: flex-end*/;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 26px;
+	width: 568px;
+  padding: 55px;
+	background: var(--basic-white);
+	box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.date-choice-form input[type="text"]{
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 26px;
+	text-transform: uppercase;
+	border: none;
+	background-color: var(--form-grey);
+	text-align: left;
+	height: 38px;
+/*	margin: 0;*/
+	padding: 0;
+}
+
+.adults-children{
+	display: flex;
+	justify-content: space-between;
+}
+
+.adults-children input[type="text"]{
+	text-align: center;
+	width: 38px;
+	height: 38px;
+/*	margin: 0;*/
+	padding: 0;
+}
+
+.date{
+	margin: ri
 }
 
 /* hidden */
@@ -407,10 +456,10 @@
 	padding-right: 8px;
 }
 
-.logo-link:hover {
+.footer-copyright a:hover{
 	fill: var(--text-hover-blue);
 }
-/*------------------------hotels.html------------------------------------*/
+/*------------------------------------hotels.html------------------------------------*/
 /* header */
 .hotels-page a{
  
@@ -577,6 +626,36 @@
 	/*	padding: 3px 16px;	*/
 }
 
+.date-choice-button{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 26px;
+	text-transform: uppercase;
+	background-color: var(--button-more-regular);
+	width: 458px;
+	min-height: 58px;
+	margin-left: auto;
+	margin-right: auto;
+	align-self: center;
+}
+
+.date-choice-button span{
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.form-button{
+
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	width: 38px;
+	height: 38px;
+}
+
 .sorting-button{
 	background: none; 
 	color: var(--basic-black);
@@ -594,13 +673,13 @@
 	color: var(--text-hover-blue);
 }
 
-.sorting-button:focus{
-	color: var(--basic-black);
+.sorting-button:active{
+	color: var(--text-hover-blue);
 	border-bottom: none;
 }
 
-.sorting-button:active{
-	color: var(--text-hover-blue);
+.sorting-button:focus{
+	color: var(--basic-black);
 	border-bottom: none;
 }
 
