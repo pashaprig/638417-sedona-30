@@ -1,4 +1,4 @@
-/* fonts */
+/* Fonts */
 
 @font-face {
   font-family: 'PT Sans';
@@ -6,7 +6,7 @@
   font-weight: 400;
   src: local('PT Sans'),
        url('../fonts/PTSans.woff2') format('woff2'),
-       url('../fonts/PTSans.woff') format('woff'),
+       url('../fonts/PTSans.woff') format('woff');
 }
 
 @font-face {
@@ -15,10 +15,10 @@
   font-weight: 700;
   src: local('PT Sans Bold'),
        url('../fonts/PTSans-Bold.woff2') format('woff2'),
-       url('../fonts/PTSans-Bold.woff') format('woff'),
+       url('../fonts/PTSans-Bold.woff') format('woff');
 }
 
-/* root */
+/* Root */
 
 :root {
 	--basic-black: #000000;
@@ -33,12 +33,12 @@
 	--text-active-brown: #766357;
 	--basic-white: #FFFFFF;
 
-/* button colors */
-/* more */
+/* Button colors */
+/* More */
 	--button-more-regular: #81B3D2;
 	--button-more-hover: #669EC0;
 	--button-more-active: #5496BD;
-/* book */
+/* Book */
 	--button-book-regular: #766357;
 	--button-book-hover: #604E43;
 	--button-book-active: #503E33;
@@ -47,6 +47,7 @@
 .page{
 	height: 100%;
 }
+
 /* для всех секций: хедер, футер...  */
 /*.container{
 	max-width: 1200px;
@@ -62,33 +63,31 @@
 	transform: translateX(-50%);
 }
 
-/* body */
+/* Body */
 .page-body{
 	position: relative;
+	display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+	max-width: 1200px;
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 21px;
 	text-transform: uppercase;
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-/*	height: 100%;	*/
   box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
-
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
 }
 
 .hero{
 	position: relative;
-	background: url(../img/background_photo.jpg) no-repeat var(--button-book-regular);
+	z-index: -1;
 	width: 1200px;
 	height: 509px;
 	margin-bottom: 41.5px;
-	z-index: -1;
+	background: url(../img/background_photo.jpg) no-repeat var(--button-book-regular);
 }
 
 .hero-shape{
@@ -98,30 +97,30 @@
 
 .baner-text{
 	position: absolute;
+	bottom: 50%;
 	width: 1200px;
 	text-align: center;
-	bottom: 50%;
-	transform: translateX(10px); /* не могу понять почему не работает */
+	transform: translateX(10px);
 	transform: translateY(50%);
 }
 
-/* navigation */
+/* Navigation */
 .site-navigation{	
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0;
 	margin: 0;
-	list-style: none;	
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 26px;
+	list-style: none;
 }
 
 .navigation-item{
 	display: inline;
+	width: 228px;
 	height: 26px;
 	margin: 15px 0;
-	width: 228px;
 	text-align: right;
 }
 
@@ -168,16 +167,16 @@
 	margin-right: 72px;
 }
 
-/* title_main_page           serch_result hotel_name */
+/* Title_main_page           Serch_result hotel_name */
 .title-big{
+	margin-bottom: auto;
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 26px;
 	text-align: center;
-	margin-bottom: auto;
 }
 
-/* features */
+/* Features */
 .main-heading-wraper{
 	display: flex;
 	flex-direction: column;
@@ -192,17 +191,17 @@
 
 .main-heading{
 	width: 470px;
-	text-align: center;
 	margin-bottom: 40px;
+	text-align: center;
 }
 
 .features-list {
 	display: grid;
-	list-style: none;
-	padding: 0;
-	margin: 0;
 	grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 256px 330px 256px 256px;
+	margin: 0;
+	padding: 0;
+  list-style: none;
 }
 
 .features-list p{
@@ -259,20 +258,20 @@
 }
 
 .feature-title{
-	font-weight: 700;
-	font-size: 21px;
-	line-height: 21px;
 	margin-bottom: 25px;
 	margin-left: 100px;
 	margin-right: 100px;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 21px;
 }
 
 .features-heading{
+	margin-bottom: 51px;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 26px;
 	text-align: center;
-	margin-bottom: 51px;
 }
 
 .big-features-text{
@@ -280,24 +279,24 @@
 	flex-direction: column;
 	justify-content: center;
 	padding: 20px;	
-	background-color: var(--text-hover-blue);
 	color: var(--basic-white);
+	background-color: var(--text-hover-blue);
 }
 
 .feature-number{
 	margin-bottom: 23px;
 }
 
-.feature-image{
-	background-color: var(--button-book-regular);
+.feature-image{	
 	width: 800px;
 	height: 256px;
+	background-color: var(--button-book-regular);
 	object-fit: contain;
 }
 
 .features-item-more{
-	background-color: var(--basic-grey);
 	color: var(--basic-black);
+	background-color: var(--basic-grey);
 }
 
 .features-item-more p{
@@ -305,49 +304,49 @@
 	margin-right: 50px;
 }
 
-/* appointment */
+/* Appointment */
 .appointment{
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	text-align: center;
+	align-items: center;
 	padding-top: 58px;
+	text-align: center;
 }
 
 .appointment-title{
+	margin-bottom: 40px;
 	font-weight: 700;
 	font-size: 30px;
-	line-height: 24px;
-	margin-bottom: 40px;
+	line-height: 24px;	
 }
 
 .appointment a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	align-self: flex-end;
+	width: 568px;
+	min-height: 86px;
+	margin-left: auto;
+	margin-right: auto;
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 26px;
 	text-decoration: none;
 	color: var(--basic-white);
 	background-color: var(--button-book-regular);
-	width: 568px;
-	min-height: 86px;
-	margin-left: auto;
-	margin-right: auto;
-	align-self: flex-end;
 }
 
 .appointment a:hover{
 	background-color: var(--button-book-hover);
-	}
+}
 
 .appointment a:active {
-	background-color: var(--button-book-active);
 	color: rgba(255,255,255,0.3);
-	}
+	background-color: var(--button-book-active);
+}
 
 /* Search_form*/
 
@@ -357,26 +356,26 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 26px;
 	width: 568px;
   padding: 55px 0;
+  font-weight: 700;
+	font-size: 14px;
+	line-height: 26px;
 	background: var(--basic-white);
 	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .date-choice-form input[type="text"]{
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 26px;
-	text-transform: uppercase;
-	border: none;
-	background-color: var(--form-grey);
-	text-align: left;
 	height: 38px;
 	padding: 0;
 	padding-left: 13px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 26px;
+	text-align: left;
+	text-transform: uppercase;
+	border: none;
+	background-color: var(--form-grey);
 }
 
 .date-choice-form input[type="text"]:hover{
@@ -386,7 +385,6 @@
 .date-choice-form input[type="text"]:focus{
 	background: var(--basic-white);
 	outline: 2px solid var(--border-grey);
-	/*box-sizing: border-box;*/
 }
 
 .adults-children{
@@ -398,11 +396,10 @@
 }
 
 .adults-children input[type="text"]{
-	text-align: center;
 	width: 38px;
 	height: 38px;
-/*	margin: 0;*/
 	padding: 0;
+	text-align: center;
 }
 
 .adults{
@@ -415,9 +412,11 @@
 	display: flex;
 	justify-content: flex-end;
 }
+
 .children label{
 	margin-right: 27px; 
 }
+
 .booking-item{
 	display: flex;
 	align-items: center;
@@ -439,8 +438,6 @@
 	height: 38px;	
 }
 
-
-
 /* Visually-hidden */
 
 .visually-hidden{
@@ -451,48 +448,41 @@
 	margin: -1px;
 }
 
-/* map */
-/*.map{
+/* Footer */
+.main-footer{
 	position: absolute;
 	bottom: 0;
-}
-
-.page-main{
-	position: relative;
-}
-*/
-/* footer */
-.main-footer{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	position: absolute;
-	bottom: 0;
-	height: 120px;
-	max-width: 1200px;
 	width: 100%;
+	max-width: 1200px;
+	height: 120px;
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.contacts{	
+.contacts{
+	align-self: center;
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 26px;
 	text-align: center;
-	align-self: center;
 }
 
-.contacts a, .contacts a{
+.contacts a, 
+.contacts a{
 	text-decoration: none;
 	color: var(--basic-black);
 }
 
-.contacts a:hover, .contacts a:hover{
+.contacts a:hover, 
+.contacts a:hover{
 	text-decoration: none;
 	color: var(--text-hover-blue);
 
 }
-.contacts a:active, .contacts a:active{
+.contacts a:active, 
+.contacts a:active{
 	text-decoration: none;
 	color: var(--basic-black);
 	opacity: 0.3;
@@ -502,16 +492,16 @@
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
-	list-style: none;
 	padding: 0;
 	text-align: center;
+	list-style: none;
 }
 
 .social-button-item{
-	position: relative;
+	display: inline;
+	position: relative;	
 	width: 46px;
 	height: 48px;
-	display: inline;
 	margin-right: 6px;
 	background-color: var(--text-hover-blue);
 }
@@ -562,16 +552,12 @@
 	fill: var(--footer-grey);
 }
 /*------------------------------------hotels.html------------------------------------*/
-/* header */
-.hotels-page a{
- 
-}
 
-/* search_form */
+/* Search_form */
 .search-field{
-	background: url(../img/background.jpg) no-repeat var(--button-book-regular);
 	padding: 26px 73px 17px 72px;
 	color: var(--basic-white);
+	background: url(../img/background.jpg) no-repeat var(--button-book-regular);
 }
 
 .search-form{
@@ -580,9 +566,9 @@
 }
 
 .checkbox-groupe fieldset{
-	border: none;
 	margin: 0 120px 0 0;
 	padding: 0;
+	border: none;
 }
 
 .option{
@@ -603,16 +589,16 @@
 
 .check-box{
 	position: absolute;
+	margin-left: -40px; 
 	width: 23px;
 	height: 23px;
 	background-image: url(../img/checkbox-off.svg);
-	margin-left: -40px; 
 }
 
 /* Checked */
 .check-input:checked + .check-box{
-	background-image: url(../img/checkbox-on.svg);
 	width: 27px;
+	background-image: url(../img/checkbox-on.svg);
 }
 
 /* Disabled */
@@ -626,9 +612,9 @@
 }
 
 .scale-groupe fieldset{
-	border: none;
 	margin: 0;
 	padding: 0;
+	border: none;
 }
 
 .search-form legend{
@@ -667,7 +653,7 @@
 .range-controls .bar {
   width: 80%;
   height: 2px;
-  background: var(--basic-white); /*must be white*/
+  background: var(--basic-white);
 }
 
 .range-controls .toggle {
@@ -705,10 +691,10 @@
 	display: flex;
 	align-items: center;
   height: 32px;
-  border: 2px solid var(--basic-white);
-  border-radius: 2px;
   margin-bottom: 11px;
   margin-bottom: 20px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
 }
 
 .price-controls input {
@@ -721,13 +707,13 @@
 }
 
 .price-controls .min-price {
-    width: 90px;
-    padding-left: 65px;
+	width: 90px;
+	padding-left: 65px;
 }
 
 .price-controls .max-price {
-    width: 90px;
-    padding-left: 50px;
+	width: 90px;
+	padding-left: 50px;
 }
 
 .scale-groupe-submit{
@@ -735,15 +721,6 @@
 	justify-content: center;
 }
 
-
-/*.infrastructure input[type="chekbox"]{
-	margin-bottom: 23px;
-}
-
-.infrastructure input[type="chekbox"]:last-child{
-	margin-bottom: 0px;
-}*/
-
 .lodging-type{
 	display: flex;
 	flex-direction: column;
@@ -753,7 +730,8 @@
 	display: flex;
 	flex-direction: column;
 }
-/* result_field */
+
+/* Result_field */
 .search-result{
 	display: flex;
 	justify-content: space-between;
@@ -771,21 +749,15 @@
 	padding-left: 29px;
 }
 
-/*.hotel-sort-buttons{
-	display: flex;
-	align-items: flex-start;
-}*/
-
 .sort-title{
 	margin-right: 40px;
 }
 
-
 .up-down-order-list{
 	display: flex;
-	list-style: none;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 .up-down-order-item:last-child{
@@ -809,7 +781,6 @@
 
 .hotels-item-flex{
 	display: flex;
-/*	grid-template-columns: 135px 1fr;*/
 }
 
 .hotel-variant{
@@ -821,8 +792,6 @@
 
 .hotel-variant .hotel-price{
 	display: flex;
-
-	/*border: 1px solid black;*/
 }
 
 .hotel-price{
@@ -831,8 +800,8 @@
 
 .hotel-type{
 	flex-basis: 110px;
-	margin-right: 9px; /* не могу понять почему 6 пикселей не хватает, руками подобрал 9, хотя размер блоков текста и кнопок одинаковый, кнопкам 6 хватает, а тексту нет */
-	}
+	margin-right: 9px;
+}
 
 .price{
 	flex-basis: 142px;
@@ -857,8 +826,8 @@
 	display: inline;
 	width: 19px;
   height: 17px;
-  background-image: url(../img/star.svg);
   margin-left: 5px;
+  background-image: url(../img/star.svg);
 }
 
 .reiting-point{
@@ -888,9 +857,9 @@
 }
 
 .hotels-result-list{
-	list-style: none;
 	padding: 0;
 	margin: 0;
+	list-style: none;
 }
 
 .hotels-result-item{
@@ -902,55 +871,51 @@
 	border-bottom: 1px solid var(--border-grey);
 }
 
-/*.hotels-result-item img{
-	padding-top: 30px;
-}*/
-
-/* buttons */
+/* Buttons */
 .button{	
+	width: 110px;
+	height: 27px;
+	margin: 0;
+	padding: 0;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 21px;
-	width: 110px;
-	height: 27px;
+	color: var(--basic-white);
 	text-transform: uppercase;
   border-width: 0;
   border-radius: 0;
-	color: var(--basic-white);
-	margin: 0;
-	padding: 0;
-	/*	padding: 3px 16px;	*/
 }
 
 .scale-groupe-button{
+	width: 137px;
+	height: 36px;
+	margin: 0 auto;
+	font-weight: 400;
   background: transparent;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
   cursor: pointer;
-  width: 137px;
-	height: 36px;
-	font-weight: 400;
-	margin: 0 auto;
 }
+
 .scale-groupe-button:hover{
+	color: var(--basic-black);
   background: var(--basic-white);
-  color: var(--basic-black)
-  }
+}
 
 .date-choice-button{
 	display: flex;
   justify-content: center;
+  align-self: center;
   align-items: center;
+  width: 458px;
+	min-height: 58px;
+	margin-left: auto;
+	margin-right: auto;
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 26px;
 	text-transform: uppercase;
 	background-color: var(--button-more-regular);
-	width: 458px;
-	min-height: 58px;
-	margin-left: auto;
-	margin-right: auto;
-	align-self: center;
 }
 
 .date-choice-button:hover{
@@ -958,8 +923,8 @@
 }
 
 .date-choice-button:active{
+	color: rgba(255,255,255,0.3);
 	background-color: var(--button-more-active);
-	color: rgba(255,255,255,0.3)
 }
 
 .date-choice-button span{
@@ -984,14 +949,14 @@
 }
 
 .sorting-button{
-	background: none; 
-	color: rgba(0,0,0,0.3);
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 18px;
 	width: auto;
 	height: auto;
 	margin-right: 32px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(0,0,0,0.3);
+	background: none; 
 	border-bottom: 1px dashed var(--text-hover-blue);
 }
 
@@ -1009,34 +974,33 @@
 	border-bottom: none;
 }
 
-
 /* More_button*/
-.more-button{	
-	background-color: var(--button-more-regular);
+.more-button{
 	min-width: 110px;
 	margin-right: 6px;
-
+	background-color: var(--button-more-regular);
 }
+
 .more-button:hover{
 	background-color: var(--button-more-hover);
 }
+
 .more-button:active{
+	color: rgba(255,255,255,0.3);
 	background-color: var(--button-more-active);
-	color: rgba(255,255,255,0.3)
 }
 
-/* book_button */
+/* Book_button */
 .book-button{
 	min-width: 142px;
 	background-color: var(--button-book-regular);
 }
+
 .book-button:hover{
 	background-color: var(--button-book-hover);
 }
+
 .book-button:active{
+	color: rgba(255,255,255,0.3);
 	background-color: var(--button-book-active);
-	color: rgba(255,255,255,0.3)
 }
-
-
-
