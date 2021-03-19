@@ -636,6 +636,10 @@
 	width: 27px;
 }
 
+.check-input:focus + .check-box{
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
 .scale-groupe fieldset{
 	margin: 0;
 	padding: 0;
