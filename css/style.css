@@ -1028,6 +1028,7 @@
 	color: rgba(0,0,0,0.3);
 	background: none; 
 	border-bottom: 1px dashed var(--text-hover-blue);
+	cursor: pointer;
 }
 
 .sorting-button:hover{
