@@ -58,7 +58,7 @@
 /* Body */
 .page-body{
 	position: relative;
-  align-content: start;
+	align-content: start;
 	max-width: 1200px;
 	width: 100%;
 	min-height: 100%;
@@ -175,6 +175,11 @@
 }
 
 /* Features */
+.features{
+	position: relative;
+	z-index: 999;
+}
+
 .main-heading-wraper{
 	display: flex;
 	flex-direction: column;
@@ -198,7 +203,7 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	margin: 0;
 	padding: 0;
-  list-style: none;
+	list-style: none;
 }
 
 .features-list p{
@@ -306,6 +311,7 @@
 	align-items: center;
 	padding-top: 57px;
 	text-align: center;
+	z-index: 999;
 }
 
 .appointment-title{
@@ -351,18 +357,81 @@
 /* Search_form*/
 
 .date-choice-form{
-	position: absolute;
-	bottom: -396px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 568px;
-  padding: 55px 0;
-  font-weight: 700;
+	padding: 55px 0;
+	font-weight: 700;
 	font-size: 14px;
 	line-height: 26px;
 	background: var(--basic-white);
 	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+/* Animation */
+
+@keyframes bounceIn{
+	0% {
+		transform:translateY(-400px);
+	}
+	100% {
+		transform:translateY(0);
+	}
+}
+
+@keyframes bounceOut{
+	0% {
+		transform:translateY(0);
+	}
+	100% {
+		display: none;
+		transform:translateY(-400px);
+	}
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal{
+	position: absolute;
+	left: 316px;
+}
+
+.modal-hide{
+	animation-name: bounceOut;
+	animation-duration: 0.6s;
+	animation-fill-mode: forwards;
+}
+
+.modal-show{
+	display: block;
+	animation-name: bounceIn;
+	animation-duration: 0.6s;
+}
+
+.modal-error{
+	animation-name: shake;
+	animation-duration: 0.6s;
 }
 
 .date-choice-form input[type="text"]{
@@ -388,8 +457,8 @@
 }
 
 .date-choice input::placeholder{
-  color: var(--basic-black);
-  opacity: 1;
+	color: var(--basic-black);
+	opacity: 1;
 }
 
 .date-choice input[type="text"]::-webkit-input-placeholder {
@@ -590,7 +659,7 @@
 }
 
 .footer-copyright a {
-    display: flex;
+	display: flex;
 }
 
 .website-by{
@@ -694,8 +763,8 @@
 }
 
 .range-filter {
-  width: 318px;
-  margin-top: 10px;
+	width: 318px;
+	margin-top: 10px;
 }
 
 .range-controls {
@@ -704,64 +773,64 @@
 }
 
 .range-controls .scale {
-  height: 2px;
-  background: rgba(255,255,255,0.3);
+	height: 2px;
+	background: rgba(255,255,255,0.3);
 }
 
 .range-controls .bar {
-  width: 80%;
-  height: 2px;
-  background: var(--basic-white);
+	width: 80%;
+	height: 2px;
+	background: var(--basic-white);
 }
 
 .range-controls .toggle {
 	position: absolute;
 	top: -9px;
-  width: 4px;
-  height: 4px;
-  padding: 0;
-  border: 8px solid var(--basic-white);
-  background-color: var(--toggle-grey);
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgb(171 171 171 / 30%);
-  cursor: pointer;
+	width: 4px;
+	height: 4px;
+	padding: 0;
+	border: 8px solid var(--basic-white);
+	background-color: var(--toggle-grey);
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgb(171 171 171 / 30%);
+	cursor: pointer;
 }
 
 .range-controls .toggle:hover {
 	top: -10px;
-  width: 5px;
-  height: 5px;
-  border: 9px solid var(--basic-white);
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgb(171 171 171 / 30%);
+	width: 5px;
+	height: 5px;
+	border: 9px solid var(--basic-white);
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgb(171 171 171 / 30%);
 }
 
 .range-controls .toggle-min {
-  left: 0;
+	left: 0;
 }
 
 .range-controls .toggle-max {
-  left: 80%;
+	left: 80%;
 }
 
 .price-controls {
 	position: relative;
 	display: flex;
 	align-items: center;
-  min-height: 32px;
-  margin-bottom: 11px;
-  margin-bottom: 20px;
-  border: 2px solid var(--basic-white);
-  border-radius: 2px;
+	min-height: 32px;
+	margin-bottom: 11px;
+	margin-bottom: 20px;
+	border: 2px solid var(--basic-white);
+	border-radius: 2px;
 }
 
 .price-controls input {
 	width: 50px;
 	margin: 0;
 	color: inherit;
-  font: inherit;
-  background: none;
-  border: none;
+	font: inherit;
+	background: none;
+	border: none;
 }
 
 .price-controls .min-price {
@@ -891,9 +960,9 @@
 .stars-item{
 	display: inline;
 	width: 19px;
-  height: 17px;
-  margin-left: 5px;
-  background-image: url(../img/star.svg);
+	height: 17px;
+	margin-left: 5px;
+	background-image: url(../img/star.svg);
 }
 
 .reiting-point{
@@ -949,8 +1018,8 @@
 	line-height: 21px;
 	color: var(--basic-white);
 	text-transform: uppercase;
-  border-width: 0;
-  border-radius: 0;
+	border-width: 0;
+	border-radius: 0;
 }
 
 .scale-groupe-button{
@@ -959,23 +1028,23 @@
 	margin: 0 auto;
 	margin-left: 86px;
 	font-weight: 400;
-  background: transparent;
-  border: 2px solid var(--basic-white);
-  border-radius: 2px;
-  cursor: pointer;
+	background: transparent;
+	border: 2px solid var(--basic-white);
+	border-radius: 2px;
+	cursor: pointer;
 }
 
 .scale-groupe-button:hover{
 	color: var(--basic-black);
-  background: var(--basic-white);
+	background: var(--basic-white);
 }
 
 .date-choice-button{
 	display: flex;
-  justify-content: center;
-  align-self: center;
-  align-items: center;
-  width: 458px;
+	justify-content: center;
+	align-self: center;
+	align-items: center;
+	width: 458px;
 	min-height: 58px;
 	margin-left: auto;
 	margin-right: auto;
